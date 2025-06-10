@@ -1,17 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\hj\\GitHub\\MyEngine\\",
+  "WorkspaceRootPath": "C:\\Github\\MyEngine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCA5EA98-9E3A-494C-9BCF-AB96D612C2F2}|Editor_Window\\Editor_Window.vcxproj|C:\\hj\\GitHub\\MyEngine\\Editor_Window\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{CCA5EA98-9E3A-494C-9BCF-AB96D612C2F2}|Editor_Window\\Editor_Window.vcxproj|C:\\Github\\MyEngine\\Editor_Window\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CCA5EA98-9E3A-494C-9BCF-AB96D612C2F2}|Editor_Window\\Editor_Window.vcxproj|solutionrelative:Editor_Window\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCA5EA98-9E3A-494C-9BCF-AB96D612C2F2}|Editor_Window\\Editor_Window.vcxproj|C:\\hj\\GitHub\\MyEngine\\Editor_Window\\CommonInclude.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CCA5EA98-9E3A-494C-9BCF-AB96D612C2F2}|Editor_Window\\Editor_Window.vcxproj|solutionrelative:Editor_Window\\CommonInclude.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{9F664052-2D22-40C3-B504-EC1483899263}|CokeEngine_SOURCE\\CokeEngine_SOURCE.vcxitems|C:\\Github\\MyEngine\\CokeEngine_SOURCE\\CokeApplication.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F664052-2D22-40C3-B504-EC1483899263}|CokeEngine_SOURCE\\CokeEngine_SOURCE.vcxitems|solutionrelative:CokeEngine_SOURCE\\CokeApplication.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCA5EA98-9E3A-494C-9BCF-AB96D612C2F2}|Editor_Window\\Editor_Window.vcxproj|C:\\hj\\GitHub\\MyEngine\\Editor_Window\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{9F664052-2D22-40C3-B504-EC1483899263}|CokeEngine_SOURCE\\CokeEngine_SOURCE.vcxitems|C:\\Github\\MyEngine\\CokeEngine_SOURCE\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F664052-2D22-40C3-B504-EC1483899263}|CokeEngine_SOURCE\\CokeEngine_SOURCE.vcxitems|solutionrelative:CokeEngine_SOURCE\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCA5EA98-9E3A-494C-9BCF-AB96D612C2F2}|Editor_Window\\Editor_Window.vcxproj|C:\\Github\\MyEngine\\Editor_Window\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CCA5EA98-9E3A-494C-9BCF-AB96D612C2F2}|Editor_Window\\Editor_Window.vcxproj|solutionrelative:Editor_Window\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -25,31 +29,40 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CommonInclude.h",
-              "DocumentMoniker": "C:\\hj\\GitHub\\MyEngine\\Editor_Window\\CommonInclude.h",
-              "RelativeDocumentMoniker": "Editor_Window\\CommonInclude.h",
-              "ToolTip": "C:\\hj\\GitHub\\MyEngine\\Editor_Window\\CommonInclude.h",
-              "RelativeToolTip": "Editor_Window\\CommonInclude.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-07T09:21:52.641Z",
+              "DocumentIndex": 2,
+              "Title": "Application.cpp",
+              "DocumentMoniker": "C:\\Github\\MyEngine\\CokeEngine_SOURCE\\Application.cpp",
+              "RelativeDocumentMoniker": "CokeEngine_SOURCE\\Application.cpp",
+              "ToolTip": "C:\\Github\\MyEngine\\CokeEngine_SOURCE\\Application.cpp",
+              "RelativeToolTip": "CokeEngine_SOURCE\\Application.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-10T13:08:16.749Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "CokeApplication.h",
+              "DocumentMoniker": "C:\\Github\\MyEngine\\CokeEngine_SOURCE\\CokeApplication.h",
+              "RelativeDocumentMoniker": "CokeEngine_SOURCE\\CokeApplication.h",
+              "ToolTip": "C:\\Github\\MyEngine\\CokeEngine_SOURCE\\CokeApplication.h",
+              "RelativeToolTip": "CokeEngine_SOURCE\\CokeApplication.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-10T13:08:10.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "framework.h",
-              "DocumentMoniker": "C:\\hj\\GitHub\\MyEngine\\Editor_Window\\framework.h",
+              "DocumentMoniker": "C:\\Github\\MyEngine\\Editor_Window\\framework.h",
               "RelativeDocumentMoniker": "Editor_Window\\framework.h",
-              "ToolTip": "C:\\hj\\GitHub\\MyEngine\\Editor_Window\\framework.h",
+              "ToolTip": "C:\\Github\\MyEngine\\Editor_Window\\framework.h",
               "RelativeToolTip": "Editor_Window\\framework.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-07T09:21:08.388Z",
               "EditorCaption": ""
@@ -58,11 +71,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\hj\\GitHub\\MyEngine\\Editor_Window\\Main.cpp",
+              "DocumentMoniker": "C:\\Github\\MyEngine\\Editor_Window\\Main.cpp",
               "RelativeDocumentMoniker": "Editor_Window\\Main.cpp",
-              "ToolTip": "C:\\hj\\GitHub\\MyEngine\\Editor_Window\\Main.cpp",
+              "ToolTip": "C:\\Github\\MyEngine\\Editor_Window\\Main.cpp",
               "RelativeToolTip": "Editor_Window\\Main.cpp",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAQwLUAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-07T09:10:37.447Z",
               "EditorCaption": ""

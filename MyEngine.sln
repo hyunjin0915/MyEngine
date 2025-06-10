@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_Window", "Editor_Window\Editor_Window.vcxproj", "{CCA5EA98-9E3A-494C-9BCF-AB96D612C2F2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CokeEngine", "CokeEngine\CokeEngine.vcxproj", "{F777AF9D-BD6C-45C3-9AED-B52D6CD80972}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CokeEngine_SOURCE", "CokeEngine_SOURCE\CokeEngine_SOURCE.vcxitems", "{9F664052-2D22-40C3-B504-EC1483899263}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +25,23 @@ Global
 		{CCA5EA98-9E3A-494C-9BCF-AB96D612C2F2}.Release|x64.Build.0 = Release|x64
 		{CCA5EA98-9E3A-494C-9BCF-AB96D612C2F2}.Release|x86.ActiveCfg = Release|Win32
 		{CCA5EA98-9E3A-494C-9BCF-AB96D612C2F2}.Release|x86.Build.0 = Release|Win32
+		{F777AF9D-BD6C-45C3-9AED-B52D6CD80972}.Debug|x64.ActiveCfg = Debug|x64
+		{F777AF9D-BD6C-45C3-9AED-B52D6CD80972}.Debug|x64.Build.0 = Debug|x64
+		{F777AF9D-BD6C-45C3-9AED-B52D6CD80972}.Debug|x86.ActiveCfg = Debug|Win32
+		{F777AF9D-BD6C-45C3-9AED-B52D6CD80972}.Debug|x86.Build.0 = Debug|Win32
+		{F777AF9D-BD6C-45C3-9AED-B52D6CD80972}.Release|x64.ActiveCfg = Release|x64
+		{F777AF9D-BD6C-45C3-9AED-B52D6CD80972}.Release|x64.Build.0 = Release|x64
+		{F777AF9D-BD6C-45C3-9AED-B52D6CD80972}.Release|x86.ActiveCfg = Release|Win32
+		{F777AF9D-BD6C-45C3-9AED-B52D6CD80972}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4501021D-1F15-480B-B842-816A621423CD}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CokeEngine_SOURCE\CokeEngine_SOURCE.vcxitems*{9f664052-2d22-40c3-b504-ec1483899263}*SharedItemsImports = 9
+		CokeEngine_SOURCE\CokeEngine_SOURCE.vcxitems*{f777af9d-bd6c-45c3-9aed-b52d6cd80972}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal

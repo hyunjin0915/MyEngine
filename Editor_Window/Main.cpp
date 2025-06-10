@@ -3,7 +3,9 @@
 
 #include "framework.h"
 #include "Editor_Window.h"
-#include "CommonInclude.h"
+#include "..\\CokeEngine_SOURCE\\CokeApplication.h"
+
+Application app;
 
 #define MAX_LOADSTRING 100
 
@@ -28,7 +30,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, //프로그램의 인스턴스 �
 
     // TODO: 여기에 코드를 입력합니다.
 
-    Test a;
+    app.test();
 
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
@@ -45,13 +47,22 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, //프로그램의 인스턴스 �
 
     MSG msg;
 
-    // 기본 메시지 루프입니다:
-    while (GetMessage(&msg, nullptr, 0, 0))
+    while (true)
     {
-        if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+        if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
         {
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
+            if (msg.message == WM_QUIT) break;
+
+            if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+            {
+                TranslateMessage(&msg);
+                DispatchMessage(&msg);
+            }
+        }
+        else
+        {
+            //메세지가 없을 경우 처리
+            //게임 로직이 들어가면 됨
         }
     }
 
@@ -152,7 +163,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
 
-            HBRUSH brush = CreateSolidBrush(RGB(255, 0, 255));
+            /*HBRUSH brush = CreateSolidBrush(RGB(255, 0, 255));
             HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, brush);
 
             Rectangle(hdc, 100, 100, 200, 200);
@@ -169,7 +180,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             HBRUSH grayBrush = (HBRUSH)GetStockObject(GRAY_BRUSH);
              oldBrush = (HBRUSH)SelectObject(hdc, grayBrush);
-            Rectangle(hdc, 400, 400, 500, 500);
+            Rectangle(hdc, 400, 400, 500, 500);*/
 
             EndPaint(hWnd, &ps);
         }
