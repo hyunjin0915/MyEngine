@@ -1,4 +1,5 @@
 #include "CokeApplication.h"
+#include "CokeInput.h"
 
 namespace coke
 {
@@ -18,6 +19,8 @@ namespace coke
 		mHdc = GetDC(hwnd);
 
 		mPlayer.SetPosition(0.0f, 0.0f);
+
+		Input::Initialize();
 	}
 	void Application::Run()
 	{
@@ -27,6 +30,8 @@ namespace coke
 	}
 	void Application::Update()
 	{
+		Input::Update();
+
 		mPlayer.Update();
 	}
 	void Application::LateUpdate()
