@@ -5,7 +5,7 @@
 #include "Editor_Window.h"
 #include "..\\CokeEngine_SOURCE\\CokeApplication.h"
 
-Application app;
+coke::Application application;
 
 #define MAX_LOADSTRING 100
 
@@ -30,7 +30,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, //프로그램의 인스턴스 �
 
     // TODO: 여기에 코드를 입력합니다.
 
-    app.test();
 
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
@@ -63,6 +62,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, //프로그램의 인스턴스 �
         {
             //메세지가 없을 경우 처리
             //게임 로직이 들어가면 됨
+            application.Run();
+
         }
     }
 
@@ -114,6 +115,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
 
+   application.Initialize(hWnd);
+
    if (!hWnd)
    {
       return FALSE;
@@ -163,24 +166,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
 
-            /*HBRUSH brush = CreateSolidBrush(RGB(255, 0, 255));
-            HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, brush);
-
-            Rectangle(hdc, 100, 100, 200, 200);
-
-            SelectObject(hdc, oldBrush);
-            DeleteObject(brush);
             
-            HPEN newPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
-            HPEN oldPen = (HPEN)SelectObject(hdc, newPen);
-            Ellipse(hdc, 200, 200, 300, 300);
-
-            SelectObject(hdc, oldPen);
-            DeleteObject(newPen);
-
-            HBRUSH grayBrush = (HBRUSH)GetStockObject(GRAY_BRUSH);
-             oldBrush = (HBRUSH)SelectObject(hdc, grayBrush);
-            Rectangle(hdc, 400, 400, 500, 500);*/
 
             EndPaint(hWnd, &ps);
         }

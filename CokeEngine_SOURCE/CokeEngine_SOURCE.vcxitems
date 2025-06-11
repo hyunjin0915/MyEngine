@@ -15,8 +15,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeGameObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Application.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeGameObject.cpp" />
   </ItemGroup>
 </Project>
