@@ -15,8 +15,15 @@ namespace coke
 
 		void Update();
 		void LateUpdate();
-
 		void Render();
+
+	private:
+		void clearRenderTarget();
+		void copyRenderTarget(HDC source, HDC dest);
+		void adjustWindowRect(HWND hwnd, UINT width, UINT height);
+		void createBuffer(UINT width, UINT height);
+		void initalizeEtc();
+
 
 	private:
 		HWND mHwnd; //핸들 
@@ -28,8 +35,8 @@ namespace coke
 		UINT mWidth;
 		UINT mHeight;
 
-		//플레이어
-		GameObject mPlayer;
+		//std::vector<Scene*> mScenes;
+		//std::vector<GameObject*> mGameObjects;
 	};
 
 }

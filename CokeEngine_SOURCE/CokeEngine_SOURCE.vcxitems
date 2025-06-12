@@ -15,16 +15,24 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Application.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeTime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Entity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Scene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Time.cpp" />
   </ItemGroup>
 </Project>
