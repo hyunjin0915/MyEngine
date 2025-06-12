@@ -10,7 +10,7 @@ namespace coke
 		Application();
 		~Application();
 
-		void Initialize(HWND hwnd);
+		void Initialize(HWND hwnd, UINT width, UINT height);
 		void Run();
 
 		void Update();
@@ -21,7 +21,13 @@ namespace coke
 	private:
 		HWND mHwnd; //핸들 
 		HDC mHdc; //DC도 미리 저장
+
+		HDC mBackHdc;
+		HBITMAP mBackBitmap;
 		
+		UINT mWidth;
+		UINT mHeight;
+
 		//플레이어
 		GameObject mPlayer;
 	};
