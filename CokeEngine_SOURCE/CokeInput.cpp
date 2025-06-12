@@ -11,7 +11,7 @@ namespace coke
 		VK_LEFT, VK_RIGHT, VK_DOWN, VK_UP,
 	};
 
-	std::vector<Input::Key> Input::mKeys = {};
+	std::vector<Input::Key> Input::Keys = {};
 
 	void Input::Initialize()
 	{
@@ -23,7 +23,7 @@ namespace coke
 	}
 	void Input::createKeys()
 	{
-		mKeys.resize((UINT)eKeyCode::End);
+		Keys.resize((UINT)eKeyCode::End);
 		for (int i = 0; i < (UINT)eKeyCode::End; i++)
 		{
 			Key key = {};
@@ -31,12 +31,12 @@ namespace coke
 			key.state = eKeyState::None;
 			key.keyCode = (eKeyCode)i;
 
-			mKeys[i] = key;
+			Keys[i] = key;
 		}
 	}
 	void Input::updateKeys()
 	{
-		std::for_each(mKeys.begin(), mKeys.end(),
+		std::for_each(Keys.begin(), Keys.end(),
 			[](Key& key) -> void
 			{
 				updateKey(key);

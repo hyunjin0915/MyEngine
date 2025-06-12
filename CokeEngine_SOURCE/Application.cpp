@@ -1,5 +1,6 @@
 #include "CokeApplication.h"
 #include "CokeInput.h"
+#include "CokeTime.h"
 
 namespace coke
 {
@@ -21,6 +22,7 @@ namespace coke
 		mPlayer.SetPosition(0.0f, 0.0f);
 
 		Input::Initialize();
+		Time::Initialize();
 	}
 	void Application::Run()
 	{
@@ -31,6 +33,7 @@ namespace coke
 	void Application::Update()
 	{
 		Input::Update();
+		Time::Update();
 
 		mPlayer.Update();
 	}
@@ -40,6 +43,7 @@ namespace coke
 	}
 	void Application::Render()
 	{
+		Time::Render(mHdc);
 		mPlayer.Render(mHdc);
 	}
 }

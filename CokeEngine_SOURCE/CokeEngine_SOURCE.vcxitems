@@ -17,11 +17,14 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Application.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeTime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Time.cpp" />
   </ItemGroup>
 </Project>
