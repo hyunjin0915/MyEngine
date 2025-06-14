@@ -9,7 +9,7 @@ namespace coke
 		Entity();
 		virtual ~Entity();
 
-		void SetName(const std::wstring& name) { mName = name };
+		void SetName(const std::wstring& name) { mName = name; };
 		std::wstring& GetName() { return mName; } //참조 안하면 복사돼서 넘어감 - 시간 이슈
 
 	private:

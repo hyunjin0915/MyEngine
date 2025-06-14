@@ -2,22 +2,24 @@
 
 namespace coke
 {
+	std::map<std::wstring, Scene*> SceneManager::mScene;
+	Scene* SceneManager::mActiveScene = nullptr;
 
-	void coke::SceneManager::Initialize()
+	void SceneManager::Initialize()
 	{
 	}
 
-	void coke::SceneManager::Update()
+	void SceneManager::Update()
 	{
 		mActiveScene->Update();
 	}
 
-	void coke::SceneManager::LateUpdate()
+	void SceneManager::LateUpdate()
 	{
 		mActiveScene->LateUpdate();
 	}
 
-	void coke::SceneManager::Render(HDC hdc)
+	void SceneManager::Render(HDC hdc)
 	{
 		mActiveScene->Render(hdc);
 	}
