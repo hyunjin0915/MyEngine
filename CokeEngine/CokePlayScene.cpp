@@ -1,5 +1,8 @@
 #include "CokePlayScene.h"
 #include "CokeGameObject.h"
+#include "CokePlayer.h"
+#include "CokeTransform.h"
+#include "CokeSpriteRenderer.h"
 
 namespace coke
 {
@@ -11,8 +14,18 @@ namespace coke
 	}
 	void PlayScene::Initialize()
 	{
-		GameObject* objc = new GameObject();
-		AddGameObject(objc);
+		Player* pl = new Player();
+		Transform* tr
+			= pl->AddComponent<Transform>();
+		tr->SetPos(800, 450);
+
+		tr->SetName(L"TR");
+
+		SpriteRenderer* sr
+			= pl->AddComponent<SpriteRenderer>();
+		sr->SetName(L"SR");
+
+		AddGameObject(pl);
 	}
 	void PlayScene::Update()
 	{

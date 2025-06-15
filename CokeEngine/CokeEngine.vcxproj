@@ -19,10 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\CokeEngine_SOURCE\CokePlayer.h" />
     <ClInclude Include="..\Editor_Window\CokeLoadScene.h" />
     <ClInclude Include="CokePlayScene.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\CokeEngine_SOURCE\CokePlayer.cpp" />
     <ClCompile Include="CokePlayScene.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

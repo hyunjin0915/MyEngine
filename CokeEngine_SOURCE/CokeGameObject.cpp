@@ -1,63 +1,63 @@
 #include "CokeGameObject.h"
 #include "CokeInput.h"
 #include "CokeTime.h"
+#include "CokeComponent.h"
 
 namespace coke
 {
 	GameObject::GameObject()
-		:mX(0.0f)
-		,mY(0.0f)
 	{
 
 	}
-
 	GameObject::~GameObject()
 	{
 	}
+	void GameObject::Initialize()
+	{
+		for (Component* comp : mComponents)
+		{
+			comp->Initialize();
+		}
+	}
 	void GameObject::Update()
 	{
-		const int speed = 100.0f;
-		//키 입력 
-		if (Input::GetKey(eKeyCode::A))
+		for (Component* comp : mComponents)
 		{
-			mX -= speed * Time::DeltaTime();
+			comp->Update();
 		}
-		if (Input::GetKey(eKeyCode::D))
-		{
-			mX += speed * Time::DeltaTime();
-		}
-		if (Input::GetKey(eKeyCode::W))
-		{
-			mY -= speed * Time::DeltaTime();
-		}
-		if (Input::GetKey(eKeyCode::S))
-		{
-			mY += speed * Time::DeltaTime();
-		}
+		//const int speed = 100.0f;
+		////키 입력 
+		//if (Input::GetKey(eKeyCode::A))
+		//{
+		//	mX -= speed * Time::DeltaTime();
+		//}
+		//if (Input::GetKey(eKeyCode::D))
+		//{
+		//	mX += speed * Time::DeltaTime();
+		//}
+		//if (Input::GetKey(eKeyCode::W))
+		//{
+		//	mY -= speed * Time::DeltaTime();
+		//}
+		//if (Input::GetKey(eKeyCode::S))
+		//{
+		//	mY += speed * Time::DeltaTime();
+		//}
 
 	}
 	void GameObject::LateUpdate()
 	{
+		for (Component* comp : mComponents)
+		{
+			comp->LateUpdate();
+		}
 	}
 	void GameObject::Render(HDC hdc)
 	{
-		HBRUSH brush = CreateSolidBrush(RGB(255, 0, 255));
-		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, brush);
-
-		Rectangle(hdc, 100 + mX, 100 + mY, 200 + mX, 200 + mY);
-
-		SelectObject(hdc, oldBrush);
-		DeleteObject(brush);
-
-		/*HPEN newPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
-		HPEN oldPen = (HPEN)SelectObject(mHdc, newPen);
-		Ellipse(mHdc, 200, 200, 300, 300);
-
-		SelectObject(mHdc, oldPen);
-		DeleteObject(newPen);
-
-		HBRUSH grayBrush = (HBRUSH)GetStockObject(GRAY_BRUSH);
-		oldBrush = (HBRUSH)SelectObject(mHdc, grayBrush);
-		Rectangle(mHdc, 400, 400, 500, 500);*/
+		for (Component* comp : mComponents)
+		{
+			comp->Render(hdc);
+		}
+		
 	}
 }
