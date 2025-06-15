@@ -22,10 +22,14 @@
     <ClInclude Include="..\CokeEngine_SOURCE\CokePlayer.h" />
     <ClInclude Include="..\Editor_Window\CokeLoadScene.h" />
     <ClInclude Include="CokePlayScene.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\CokeEngine_SOURCE\CokePlayer.cpp" />
     <ClCompile Include="CokePlayScene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CokeEngine.rc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

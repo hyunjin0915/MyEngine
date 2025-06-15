@@ -11,9 +11,13 @@
     </ClInclude>
     <ClInclude Include="CokePlayScene.h" />
     <ClInclude Include="..\CokeEngine_SOURCE\CokePlayer.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CokePlayScene.cpp" />
     <ClCompile Include="..\CokeEngine_SOURCE\CokePlayer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CokeEngine.rc" />
   </ItemGroup>
 </Project>
