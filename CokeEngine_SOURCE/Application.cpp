@@ -51,7 +51,7 @@ namespace coke
 	}
 	void Application::LateUpdate()
 	{
-
+		SceneManager::LateUpdate();
 	}
 	void Application::Render()
 	{

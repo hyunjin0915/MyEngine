@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Application.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeComponent.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeEntity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeGameObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeSceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeSpriteRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeTransform.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Entity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Scene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Time.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeInput.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeTime.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeComponent.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeEntity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeGameObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeSceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeSpriteRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeTransform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeInput.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeTime.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{e85ed289-5549-4dd2-b0f7-8a417e5c0e77}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

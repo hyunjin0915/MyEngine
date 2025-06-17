@@ -1,4 +1,7 @@
 #include "CokePlayer.h"
+#include "CokeInput.h"
+#include "CokeTransform.h"
+#include "CokeTime.h"
 
 namespace coke
 {
@@ -15,6 +18,14 @@ namespace coke
 	void Player::LateUpdate()
 	{
 		GameObject::LateUpdate();
+
+		if (Input::GetKeyDown(eKeyCode::Right))
+		{
+			Transform* tr = GetComponent<Transform>();
+			Vector2 pos = tr->GetPosition();
+			pos.x += 100.0f * Time::DeltaTime();
+			tr->SetPos(pos);
+		}
 	}
 
 	void Player::Render(HDC hdc)

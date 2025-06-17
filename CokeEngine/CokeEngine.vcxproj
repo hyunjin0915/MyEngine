@@ -22,11 +22,13 @@
     <ClInclude Include="..\CokeEngine_SOURCE\CokePlayer.h" />
     <ClInclude Include="..\Editor_Window\CokeLoadScene.h" />
     <ClInclude Include="CokePlayScene.h" />
+    <ClInclude Include="CokeTitleScene.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\CokeEngine_SOURCE\CokePlayer.cpp" />
     <ClCompile Include="CokePlayScene.cpp" />
+    <ClCompile Include="CokeTitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CokeEngine.rc" />

@@ -4,18 +4,35 @@
     <Filter Include="Scenes">
       <UniqueIdentifier>{070f0e56-0157-462f-9e6d-c7bb67089312}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Contents">
+      <UniqueIdentifier>{f6c70b6d-655b-450a-abc3-e21a0884badd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Editor_Window\CokeLoadScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="CokePlayScene.h" />
-    <ClInclude Include="..\CokeEngine_SOURCE\CokePlayer.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="CokePlayScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="CokeTitleScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CokeEngine_SOURCE\CokePlayer.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CokePlayScene.cpp" />
-    <ClCompile Include="..\CokeEngine_SOURCE\CokePlayer.cpp" />
+    <ClCompile Include="CokePlayScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="CokeTitleScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CokeEngine_SOURCE\CokePlayer.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CokeEngine.rc" />

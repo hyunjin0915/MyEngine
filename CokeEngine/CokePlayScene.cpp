@@ -3,6 +3,9 @@
 #include "CokePlayer.h"
 #include "CokeTransform.h"
 #include "CokeSpriteRenderer.h"
+#include "CokeInput.h"
+#include "CokeTitleScene.h"
+#include "CokeSceneManager.h"
 
 namespace coke
 {
@@ -27,7 +30,7 @@ namespace coke
 
 		AddGameObject(pl);*/
 
-		Player* bg = new Player();
+		 bg = new Player();
 			Transform* tr
 			= bg->AddComponent<Transform>();
 		tr->SetPos(Vector2(0, 0));
@@ -54,9 +57,23 @@ namespace coke
 	void PlayScene::LateUpdate()
 	{
 		Scene::LateUpdate();
+		if (Input::GetKeyDown(eKeyCode::N))
+		{
+			SceneManager::LoadScene(L"TitleScene");
+		}
 	}
 	void PlayScene::Render(HDC hdc)
 	{
 		Scene::Render(hdc);
+		wchar_t str[50] = L"PlayScene";
+		TextOut(hdc, 0, 0, str, 50);
+	}
+	void PlayScene::OnEnter()
+	{
+	}
+	void PlayScene::OnExit()
+	{
+		Transform* tr = bg -> GetComponent<Transform>();
+		tr->SetPos(Vector2(0,0));
 	}
 }
