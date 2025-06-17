@@ -7,6 +7,7 @@ namespace coke
 
 	void SceneManager::Initialize()
 	{
+		//mActiveScene->Initialize();
 	}
 
 	void SceneManager::Update()

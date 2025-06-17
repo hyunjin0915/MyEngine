@@ -1,28 +1,27 @@
 #pragma once
 #include "CokeEntity.h"
+#include "CommonInclude.h"
 #include "CokeGameObject.h"
-#include "CokeLayer.h"
 
 namespace coke
 {
-	class Scene : public Entity
+	class Layer : public Entity
 	{
 	public:
-		Scene();
-		~Scene();
+		Layer();
+		~Layer();
 
 		virtual void Initialize();
 		virtual void Update();
 		virtual void LateUpdate();
 		virtual void Render(HDC hdc);
 
-		virtual void OnEnter();
-		virtual void OnExit();
-
-		void AddGameObject(GameObject* gameObject, eLayerType type);
+		void AddGameObject(GameObject* gameObject);
 
 	private:
-		std::vector<Layer*> mLayers;
+		eLayerType mType;
+
+		std::vector<GameObject*> mGameObjects;
 	};
 
 

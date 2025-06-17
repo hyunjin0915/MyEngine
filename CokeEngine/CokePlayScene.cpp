@@ -43,7 +43,7 @@ namespace coke
 		sr->ImageLoad(L"C:\\Github\\MyEngine\\CokeEngine\\Resources\\CloudOcean.png");
 
 
-		AddGameObject(bg);
+		AddGameObject(bg, eLayerType::BackGround);
 	}
 	void PlayScene::Update()
 	{

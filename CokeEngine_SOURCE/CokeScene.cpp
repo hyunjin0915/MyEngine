@@ -3,8 +3,13 @@
 namespace coke
 {
 	Scene::Scene()
-		: mGameObjects{}
+		: mLayers{}
 	{
+		mLayers.resize((UINT)eLayerType::Max);
+		for (size_t i = 0; i < (UINT)eLayerType::Max; i++)
+		{
+			mLayers[i] = new Layer();
+		}
 	}
 
 	Scene::~Scene()
@@ -13,32 +18,49 @@ namespace coke
 
 	void Scene::Initialize()
 	{
+		for (Layer* layer : mLayers)
+		{
+			if (layer == nullptr) return;
+
+			layer->Initialize();
+		}
+
 	}
 
 	void Scene::Update()
 	{
-		for(GameObject* gameObj : mGameObjects)
+		for(Layer* layer : mLayers)
 		{
-			gameObj->Update();
+			if (layer == nullptr) return;
+
+			layer->Update();
 		}
 	}
 
 	void Scene::LateUpdate()
 	{
-		for (GameObject* gameObj : mGameObjects)
+		for (Layer* layer : mLayers)
 		{
-			gameObj->LateUpdate();
+			if (layer == nullptr) return;
+
+			layer->LateUpdate();
 		}
 
 	}
 
 	void Scene::Render(HDC hdc)
 	{
-		for (GameObject* gameObj : mGameObjects)
+		for (Layer* layer : mLayers)
 		{
-			gameObj->Render(hdc);
+			if (layer == nullptr) return;
+
+			layer->Render(hdc);
 		}
 
+	}
+	void Scene::AddGameObject(GameObject* gameObject, eLayerType type)
+	{
+		mLayers[(UINT)type]->AddGameObject(gameObject);
 	}
 	void Scene::OnEnter()
 	{
@@ -49,9 +71,5 @@ namespace coke
 
 	}
 
-	void Scene::AddGameObject(GameObject* gameObject)
-	{
-		mGameObjects.push_back(gameObject);
-	}
 
 }
