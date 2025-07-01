@@ -23,10 +23,12 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeSpriteRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeTexture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeTransform.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
@@ -38,10 +40,12 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeSpriteRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeTexture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeTransform.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Entity.cpp" />

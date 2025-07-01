@@ -7,6 +7,7 @@
 #include "CokeTitleScene.h"
 #include "CokeSceneManager.h"
 #include "CokeObject.h"
+#include "CokeTexture.h"
 
 namespace coke
 {
@@ -50,7 +51,8 @@ namespace coke
 		SpriteRenderer* sr
 			= bg->AddComponent<SpriteRenderer>();
 		sr->SetName(L"SR");
-		sr->ImageLoad(L"C:\\hj\\GitHub\\MyEngine\\CokeEngine\\Resources\\noon.png");
+		graphics::Texture* tex = new graphics::Texture();
+		tex->Load(L"C:\\hj\\GitHub\\MyEngine\\CokeEngine\\Resources\\noon.png");
 
 	}
 	void PlayScene::Update()

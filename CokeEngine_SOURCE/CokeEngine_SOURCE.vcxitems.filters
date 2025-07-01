@@ -4,7 +4,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Application.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeGameObject.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)CokeResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeSpriteRenderer.cpp" />
@@ -24,12 +23,14 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeLayer.cpp">
       <Filter>Layer</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeResources.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeGameObject.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)CokeResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeSpriteRenderer.h" />
@@ -58,6 +59,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeObject.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeResources.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Helpers">
@@ -68,6 +72,9 @@
     </Filter>
     <Filter Include="Common">
       <UniqueIdentifier>{4d89228f-9919-43dc-bf81-e4425a83802b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{9d3fc449-ae0f-41b4-b777-d44c0dce1430}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

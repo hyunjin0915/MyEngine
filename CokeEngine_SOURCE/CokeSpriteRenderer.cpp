@@ -6,9 +6,6 @@
 namespace coke
 {
 	SpriteRenderer::SpriteRenderer()
-		: mImage(nullptr)
-		, mWidth(0)
-		, mHeight(0)
 	{
 	}
 
@@ -30,11 +27,11 @@ namespace coke
 
 	void SpriteRenderer::Render(HDC hdc)
 	{
-		Transform* tr = GetOwner()->GetComponent<Transform>();
+		/*Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 pos = tr->GetPosition();
 
 		Gdiplus::Graphics graphcis(hdc);
-		graphcis.DrawImage(mImage, Gdiplus::Rect(pos.x, pos.y, mWidth, mHeight));
+		graphcis.DrawImage(mImage, Gdiplus::Rect(pos.x, pos.y, mWidth, mHeight));*/
 
 		/*HBRUSH brush = CreateSolidBrush(RGB(255, 0, 255));
 		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, brush);
@@ -47,10 +44,4 @@ namespace coke
 
 	}
 
-	void SpriteRenderer::ImageLoad(const std::wstring& path)
-	{
-		mImage = Gdiplus::Image::FromFile(path.c_str());
-		mWidth = mImage->GetWidth();
-		mHeight = mImage->GetHeight();
-	}
 }

@@ -1,5 +1,11 @@
 #pragma once
-class Resources
+
+namespace coke
 {
-};
+	class Resources
+	{
+
+	};
+
+}
 
