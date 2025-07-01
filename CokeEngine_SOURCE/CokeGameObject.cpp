@@ -2,12 +2,13 @@
 #include "CokeInput.h"
 #include "CokeTime.h"
 #include "CokeComponent.h"
+#include "CokeTransform.h"
 
 namespace coke
 {
 	GameObject::GameObject()
 	{
-
+		InitializeTransform();
 	}
 	GameObject::~GameObject()
 	{
@@ -59,5 +60,9 @@ namespace coke
 			comp->Render(hdc);
 		}
 		
+	}
+	void GameObject::InitializeTransform()
+	{
+		AddComponent<Transform>();
 	}
 }

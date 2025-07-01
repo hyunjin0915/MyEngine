@@ -55,6 +55,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeLayer.h">
       <Filter>Layer</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeObject.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Helpers">

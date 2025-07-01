@@ -6,6 +6,7 @@
 #include "CokeInput.h"
 #include "CokeTitleScene.h"
 #include "CokeSceneManager.h"
+#include "CokeObject.h"
 
 namespace coke
 {
@@ -30,10 +31,10 @@ namespace coke
 
 		AddGameObject(pl);*/
 
-		 bg = new Player();
+		/* bg = new Player();
 			Transform* tr
 			= bg->AddComponent<Transform>();
-		tr->SetPos(Vector2(0, 0));
+		tr->SetPosition(Vector2(0, 0));
 
 		tr->SetName(L"TR");
 
@@ -43,7 +44,14 @@ namespace coke
 		sr->ImageLoad(L"C:\\Github\\MyEngine\\CokeEngine\\Resources\\CloudOcean.png");
 
 
-		AddGameObject(bg, eLayerType::BackGround);
+		AddGameObject(bg, eLayerType::BackGround);*/
+
+		bg = object::Instantiate<Player>(enums::eLayerType::BackGround, Vector2(100.0f, 100.0f));
+		SpriteRenderer* sr
+			= bg->AddComponent<SpriteRenderer>();
+		sr->SetName(L"SR");
+		sr->ImageLoad(L"C:\\hj\\GitHub\\MyEngine\\CokeEngine\\Resources\\noon.png");
+
 	}
 	void PlayScene::Update()
 	{
@@ -73,7 +81,7 @@ namespace coke
 	}
 	void PlayScene::OnExit()
 	{
-		Transform* tr = bg -> GetComponent<Transform>();
-		tr->SetPos(Vector2(0,0));
+		/*Transform* tr = bg -> GetComponent<Transform>();
+		tr->SetPosition(Vector2(0,0));*/
 	}
 }

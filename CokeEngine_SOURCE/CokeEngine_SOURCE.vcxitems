@@ -22,6 +22,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeSceneManager.h" />

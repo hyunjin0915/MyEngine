@@ -19,7 +19,7 @@ namespace coke
 		void AddGameObject(GameObject* gameObject);
 
 	private:
-		eLayerType mType;
+		enums::eLayerType mType;
 
 		std::vector<GameObject*> mGameObjects;
 	};

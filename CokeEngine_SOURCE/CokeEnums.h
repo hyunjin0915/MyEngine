@@ -1,6 +1,6 @@
 #pragma once
 
-namespace coke
+namespace coke ::enums
 {
 	enum class eLayerType
 	{
