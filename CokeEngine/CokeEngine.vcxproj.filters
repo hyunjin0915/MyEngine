@@ -22,6 +22,7 @@
     <ClInclude Include="..\CokeEngine_SOURCE\CokePlayer.h">
       <Filter>Contents</Filter>
     </ClInclude>
+    <ClInclude Include="CokeLoadResources.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CokePlayScene.cpp">

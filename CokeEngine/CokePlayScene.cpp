@@ -8,6 +8,7 @@
 #include "CokeSceneManager.h"
 #include "CokeObject.h"
 #include "CokeTexture.h"
+#include "CokeResources.h"
 
 namespace coke
 {
@@ -19,41 +20,18 @@ namespace coke
 	}
 	void PlayScene::Initialize()
 	{
-		/*Player* pl = new Player();
-		Transform* tr
-			= pl->AddComponent<Transform>();
-		tr->SetPos(800, 450);
-
-		tr->SetName(L"TR");
-
-		SpriteRenderer* sr
-			= pl->AddComponent<SpriteRenderer>();
-		sr->SetName(L"SR");
-
-		AddGameObject(pl);*/
-
-		/* bg = new Player();
-			Transform* tr
-			= bg->AddComponent<Transform>();
-		tr->SetPosition(Vector2(0, 0));
-
-		tr->SetName(L"TR");
-
-		SpriteRenderer* sr
-			= bg->AddComponent<SpriteRenderer>();
-		sr->SetName(L"SR");
-		sr->ImageLoad(L"C:\\Github\\MyEngine\\CokeEngine\\Resources\\CloudOcean.png");
-
-
-		AddGameObject(bg, eLayerType::BackGround);*/
-
+		 //게임오브젝트 만들기 전에 리소스들 전부 Load 해두면 좋음
 		bg = object::Instantiate<Player>(enums::eLayerType::BackGround, Vector2(100.0f, 100.0f));
 		SpriteRenderer* sr
 			= bg->AddComponent<SpriteRenderer>();
 		sr->SetName(L"SR");
-		graphics::Texture* tex = new graphics::Texture();
-		tex->Load(L"C:\\hj\\GitHub\\MyEngine\\CokeEngine\\Resources\\noon.png");
+		sr->SetTexture(Resources::Find<graphics::Texture>(L"BG"));
 
+		/*graphics::Texture* tex = new graphics::Texture();
+		tex->Load(L"C:\\hj\\GitHub\\MyEngine\\CokeEngine\\Resources\\noon.png");*/
+
+		//게임오브젝트 생성 후에 레이어와 게임오브젝트들의 init 함수 호출
+		Scene::Initialize();
 	}
 	void PlayScene::Update()
 	{

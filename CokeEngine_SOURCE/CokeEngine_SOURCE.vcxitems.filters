@@ -26,6 +26,13 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeResources.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeTexture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeMath.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeApplication.h" />
@@ -60,6 +67,10 @@
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeResources.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeTexture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeResource.h">
       <Filter>Resource</Filter>
     </ClInclude>
   </ItemGroup>

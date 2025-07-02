@@ -5,6 +5,7 @@
 #include "Editor_Window.h"
 #include "..\\CokeEngine_SOURCE\\CokeApplication.h"
 #include "CokeLoadScene.h"
+#include "..\\CokeEngine\\CokeLoadResources.h"
 
 coke::Application application;
 
@@ -137,6 +138,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    Gdiplus::GdiplusStartup(&gpToken, &gpsi, NULL);
 
    //load Scenes
+   coke::LoadReaources();
    coke::LoadScenes();
 
    return TRUE;

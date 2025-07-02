@@ -23,6 +23,7 @@
     <ClInclude Include="..\Editor_Window\CokeLoadScene.h" />
     <ClInclude Include="CokePlayScene.h" />
     <ClInclude Include="CokeTitleScene.h" />
+    <ClInclude Include="CokeLoadResources.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
