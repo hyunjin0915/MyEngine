@@ -3,6 +3,7 @@
 namespace coke
 {
 	Transform::Transform()
+		:Component(enums::eComponentType::Transform)
 	{
 	}
 

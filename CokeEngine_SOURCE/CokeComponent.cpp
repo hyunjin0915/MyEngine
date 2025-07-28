@@ -1,6 +1,7 @@
 #include "CokeComponent.h"
 
-coke::Component::Component()
+coke::Component::Component(enums::eComponentType type)
+	: mType(type)
 {
 }
 

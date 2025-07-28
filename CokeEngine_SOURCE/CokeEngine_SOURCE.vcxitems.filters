@@ -2,12 +2,9 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Application.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)CokeComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeSceneManager.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)CokeSpriteRenderer.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)CokeTransform.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Entity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Scene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Time.cpp" />
@@ -33,15 +30,22 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeMath.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeScript.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeSpriteRenderer.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeTransform.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeApplication.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)CokeComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeSceneManager.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)CokeSpriteRenderer.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)CokeTransform.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeInput.h">
       <Filter>Helpers</Filter>
     </ClInclude>
@@ -73,6 +77,16 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeResource.h">
       <Filter>Resource</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeScript.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeSpriteRenderer.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeTransform.h">
+      <Filter>Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Helpers">
@@ -86,6 +100,9 @@
     </Filter>
     <Filter Include="Resource">
       <UniqueIdentifier>{9d3fc449-ae0f-41b4-b777-d44c0dce1430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{12ea1a68-ec8c-46bd-aba6-4f8cfd32cc8c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

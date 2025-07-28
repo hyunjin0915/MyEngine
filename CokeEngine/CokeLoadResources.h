@@ -6,7 +6,7 @@ namespace coke
 {
 	void LoadReaources()
 	{
-		Resources::Load<graphics::Texture>(L"BG", L"C:\\hj\\GitHub\\MyEngine\\CokeEngine\\Resources\\noon.png");
+		Resources::Load<graphics::Texture>(L"BG", L"C:\\GitHub\\MyEngine\\CokeEngine\\Resources\\noon.png");
 
 	}
 }

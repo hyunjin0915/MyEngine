@@ -27,6 +27,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeSceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeScript.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeSpriteRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeTexture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeTime.h" />
@@ -45,6 +46,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeSceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeScript.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeSpriteRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeTexture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeTime.cpp" />

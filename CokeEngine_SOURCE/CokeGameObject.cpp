@@ -8,6 +8,7 @@ namespace coke
 {
 	GameObject::GameObject()
 	{
+		mComponents.resize((UINT)enums::eComponentType::End);
 		InitializeTransform();
 	}
 	GameObject::~GameObject()
@@ -17,6 +18,10 @@ namespace coke
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+			{
+				continue;
+			}
 			comp->Initialize();
 		}
 	}
@@ -24,6 +29,10 @@ namespace coke
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+			{
+				continue;
+			}
 			comp->Update();
 		}
 		//const int speed = 100.0f;
@@ -50,6 +59,10 @@ namespace coke
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+			{
+				continue;
+			}
 			comp->LateUpdate();
 		}
 	}
@@ -57,6 +70,10 @@ namespace coke
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+			{
+				continue;
+			}
 			comp->Render(hdc);
 		}
 		

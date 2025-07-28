@@ -9,6 +9,7 @@
 #include "CokeObject.h"
 #include "CokeTexture.h"
 #include "CokeResources.h"
+#include "CokePlayerScript.h"
 
 namespace coke
 {
@@ -24,6 +25,7 @@ namespace coke
 		bg = object::Instantiate<Player>(enums::eLayerType::BackGround, Vector2(100.0f, 100.0f));
 		SpriteRenderer* sr
 			= bg->AddComponent<SpriteRenderer>();
+		bg->AddComponent<PlayerScript>();
 		sr->SetName(L"SR");
 		sr->SetTexture(Resources::Find<graphics::Texture>(L"BG"));
 

@@ -7,6 +7,9 @@
     <Filter Include="Contents">
       <UniqueIdentifier>{f6c70b6d-655b-450a-abc3-e21a0884badd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Contents\Scripts">
+      <UniqueIdentifier>{2b3ebd05-fc46-42e7-9c55-0f4ef9cce431}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Editor_Window\CokeLoadScene.h">
@@ -23,6 +26,7 @@
       <Filter>Contents</Filter>
     </ClInclude>
     <ClInclude Include="CokeLoadResources.h" />
+    <ClInclude Include="CokePlayerScript.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CokePlayScene.cpp">
@@ -34,6 +38,7 @@
     <ClCompile Include="..\CokeEngine_SOURCE\CokePlayer.cpp">
       <Filter>Contents</Filter>
     </ClCompile>
+    <ClCompile Include="CokePlayerScript.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CokeEngine.rc" />
