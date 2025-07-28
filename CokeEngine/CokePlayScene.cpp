@@ -10,6 +10,7 @@
 #include "CokeTexture.h"
 #include "CokeResources.h"
 #include "CokePlayerScript.h"
+#include "CokeCamera.h"
 
 namespace coke
 {
@@ -21,11 +22,17 @@ namespace coke
 	}
 	void PlayScene::Initialize()
 	{
+		//main camera
+		GameObject* camera = object::Instantiate<GameObject>(enums::eLayerType::None);
+		camera->AddComponent<Camera>();
+		camera->AddComponent<PlayerScript>();
+
 		 //게임오브젝트 만들기 전에 리소스들 전부 Load 해두면 좋음
 		bg = object::Instantiate<Player>(enums::eLayerType::BackGround, Vector2(100.0f, 100.0f));
 		SpriteRenderer* sr
 			= bg->AddComponent<SpriteRenderer>();
-		bg->AddComponent<PlayerScript>();
+		//bg->AddComponent<PlayerScript>();
+
 		sr->SetName(L"SR");
 		sr->SetTexture(Resources::Find<graphics::Texture>(L"BG"));
 

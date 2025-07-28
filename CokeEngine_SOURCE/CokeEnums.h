@@ -7,6 +7,7 @@ namespace coke ::enums
 		Transform,
 		SpriteRenderer,
 		Script,
+		Camera,
 		End,
 	};
 
