@@ -45,6 +45,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeCamera.cpp">
       <Filter>Component\Camera</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeApplication.h" />
@@ -97,6 +98,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeCamera.h">
       <Filter>Component\Camera</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Helpers">
@@ -125,6 +127,9 @@
     </Filter>
     <Filter Include="Component\Camera">
       <UniqueIdentifier>{81ea98b2-8d95-4de2-b0b2-6d3ab83e90f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{38214148-21ea-41a7-9308-db9e402414dd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

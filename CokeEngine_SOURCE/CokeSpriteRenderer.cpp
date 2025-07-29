@@ -2,6 +2,7 @@
 #include "CokeGameObject.h"
 #include "CokeTransform.h"
 #include "CokeTexture.h"
+#include "CokeRenderer.h"
 
 namespace coke
 {
@@ -36,6 +37,7 @@ namespace coke
 		}
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 pos = tr->GetPosition();
+		pos = renderer::mainCamera->CalculatePosition(pos);
 
 		if (mTexture->GetTextureType() == graphics::Texture::eTextureType::Bmp)
 		{
