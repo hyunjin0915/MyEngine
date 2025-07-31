@@ -6,6 +6,7 @@ namespace coke ::enums
 	{
 		Transform,
 		SpriteRenderer,
+		Animator,
 		Script,
 		Camera,
 		End,
@@ -25,6 +26,7 @@ namespace coke ::enums
 		//Mesh,
 		//Shader,
 		AudioClip,
+		Animation,
 		Prefab,
 		End,
 	};

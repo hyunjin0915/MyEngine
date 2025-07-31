@@ -46,6 +46,12 @@
       <Filter>Component\Camera</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)CokeRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeAnimator.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CokeAnimation.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeApplication.h" />
@@ -99,6 +105,12 @@
       <Filter>Component\Camera</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)CokeRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeAnimator.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CokeAnimation.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Helpers">
