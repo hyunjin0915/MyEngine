@@ -1,5 +1,10 @@
 #include "CokeAnimation.h"
 #include "CokeTime.h"
+#include "CokeTransform.h"
+#include "CokeGameObject.h"
+#include "CokeAnimator.h"
+#include "CokeRenderer.h"
+//#include "CokeCamera.h"
 namespace coke
 {
 	Animation::Animation()
@@ -26,7 +31,8 @@ namespace coke
 		mTime += Time::DeltaTime();
 		if (mAnimationSheet[mIndex].duration < mTime)
 		{
-			if (mIndex < mAnimationSheet.size()-1)
+			mTime = 0.0f;
+			if (mIndex < mAnimationSheet.size() -1)
 			{
 				mIndex++;
 			}
@@ -38,9 +44,42 @@ namespace coke
 	}
 	void Animation::Render(HDC hdc)
 	{
+		if (mTexture == nullptr) return;
+
+		GameObject* gameObj = mAnimator->GetOwner();
+		Transform* tr = gameObj->GetComponent<Transform>();
+		Vector2 pos = tr->GetPosition();
+
+		if (renderer::mainCamera)
+		{
+			pos = renderer::mainCamera->CalculatePosition(pos);
+		}
+		BLENDFUNCTION func = {};
+		func.BlendOp = AC_SRC_OVER;
+		func.BlendFlags = 0;
+		func.AlphaFormat = AC_SRC_ALPHA;
+		func.SourceConstantAlpha = 255;
+
+		Sprite sprite = mAnimationSheet[mIndex];
+		HDC imgHdc = mTexture->GetHdc();
+
+		AlphaBlend(hdc, pos.x, pos.y, sprite.size.x, sprite.size.y
+			, imgHdc, sprite.leftTop.x, sprite.leftTop.y, sprite.size.x, sprite.size.y, func);
 	}
 	void Animation::CreateAnimation(const std::wstring& name, graphics::Texture* spriteSheet, Vector2 leftTop, Vector2 size, Vector2 offset, UINT spriteLength, float duration)
 	{
+		mTexture = spriteSheet;
+		for (int i = 0; i < spriteLength; i++)
+		{
+			Sprite sprite = {};
+			sprite.leftTop.x = leftTop.x + size.x * i;
+			sprite.leftTop.y = leftTop.y;
+			sprite.size = size;
+			sprite.offset = offset;
+			sprite.duration = duration;
+
+			mAnimationSheet.push_back(sprite);
+		}
 	}
 	void Animation::Reset()
 	{

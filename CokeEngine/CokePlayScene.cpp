@@ -12,6 +12,7 @@
 #include "CokePlayerScript.h"
 #include "CokeCamera.h"
 #include "CokeRenderer.h"
+#include "CokeAnimator.h"
 
 namespace coke
 {
@@ -29,12 +30,16 @@ namespace coke
 		renderer::mainCamera = cameraComp;
 
 		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
-		SpriteRenderer* sr = mPlayer->AddComponent<SpriteRenderer>();
-		sr->SetSize(Vector2(3.0f, 3.0f));
+		/*SpriteRenderer* sr = mPlayer->AddComponent<SpriteRenderer>();
+		sr->SetSize(Vector2(3.0f, 3.0f));*/
 		mPlayer->AddComponent<PlayerScript>();
 		
-		graphics::Texture* pacmacTexture = Resources::Find<graphics::Texture>(L"Pacman");
-		sr->SetTexture(pacmacTexture);
+		graphics::Texture* pacmacTexture = Resources::Find<graphics::Texture>(L"Cat");
+		Animator* animator =  mPlayer->AddComponent<Animator>();
+		animator->CreateAnimation(L"CatFrontMove", pacmacTexture
+			, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.3f);
+		animator->PlayAnimation(L"CatFrontMove", true);
+		/*sr->SetTexture(pacmacTexture);*/
 
 
 		GameObject* bg = object::Instantiate<GameObject>(enums::eLayerType::BackGround);
