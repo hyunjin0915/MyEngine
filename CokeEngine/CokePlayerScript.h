@@ -1,11 +1,21 @@
 #pragma once
 #include "..\\CokeEngine_SOURCE\\CokeScript.h"
+#include "CokeAnimator.h"
 
 namespace coke
 {
 	class PlayerScript : public Script
 	{
 	public:
+		enum class eState
+		{
+			SitDown,
+			Walk,
+			Sleep,
+			Attack
+		};
+
+
 		PlayerScript();
 		~PlayerScript();
 
@@ -13,7 +23,14 @@ namespace coke
 		void Update() override;
 		void LateUpdate()override;
 		void Render(HDC hdc)override;
+
 	private:
+		void sitDown();
+		void move();
+
+	private:
+		eState mState;
+		class Animator* mAnimator;
 	};
 
 }

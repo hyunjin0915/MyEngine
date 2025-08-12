@@ -34,15 +34,32 @@ namespace coke
 		sr->SetSize(Vector2(3.0f, 3.0f));*/
 		mPlayer->AddComponent<PlayerScript>();
 		
-		graphics::Texture* pacmacTexture = Resources::Find<graphics::Texture>(L"MapleEffect");
+		/*graphics::Texture* pacmacTexture = Resources::Find<graphics::Texture>(L"MapleEffect");
 		Animator* animator =  mPlayer->AddComponent<Animator>();
 		animator->CreateAnimation(L"CatFrontMove", pacmacTexture
 			, Vector2(0.0f, 0.0f), Vector2(386.0f, 246.0f), Vector2::Zero, 8, 0.1f);
-		animator->PlayAnimation(L"CatFrontMove", true);
+		animator->PlayAnimation(L"CatFrontMove", true);*/
+		
+		graphics::Texture* pacmacTexture = Resources::Find<graphics::Texture>(L"Cat");
+		Animator* animator =  mPlayer->AddComponent<Animator>();
+		animator->CreateAnimation(L"DownWalk", pacmacTexture
+			, Vector2(0.0f, 0.0f), Vector2(32, 32), Vector2::Zero, 4, 0.5f);
+		animator->CreateAnimation(L"RightWalk", pacmacTexture
+			, Vector2(0.0f, 32.0f), Vector2(32, 32), Vector2::Zero, 4, 0.5f);
+		animator->CreateAnimation(L"UpWalk", pacmacTexture
+			, Vector2(0.0f, 64.0f), Vector2(32, 32), Vector2::Zero, 4, 0.5f);
+		animator->CreateAnimation(L"LeftWalk", pacmacTexture
+			, Vector2(0.0f,96.0f), Vector2(32, 32), Vector2::Zero, 4, 0.5f);
+		animator->CreateAnimation(L"SitDown", pacmacTexture
+			, Vector2(0.0f, 128.0f), Vector2(32, 32), Vector2::Zero, 4, 0.5f);
+		animator->CreateAnimation(L"Grooming", pacmacTexture
+			, Vector2(0.0f, 160.0f), Vector2(32, 32), Vector2::Zero, 4, 0.5f);
+
+		animator->PlayAnimation(L"SitDown", false);
 
 		mPlayer->GetComponent<Transform>()->SetPosition(Vector2(100.0f, 100.0f));
 		mPlayer->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
-		mPlayer->GetComponent<Transform>()->SetRotation(30.0f);
+		//mPlayer->GetComponent<Transform>()->SetRotation(30.0f);
 		/*sr->SetTexture(pacmacTexture);*/
 
 
