@@ -34,19 +34,23 @@ namespace coke
 		sr->SetSize(Vector2(3.0f, 3.0f));*/
 		mPlayer->AddComponent<PlayerScript>();
 		
-		graphics::Texture* pacmacTexture = Resources::Find<graphics::Texture>(L"Cat");
+		graphics::Texture* pacmacTexture = Resources::Find<graphics::Texture>(L"MapleEffect");
 		Animator* animator =  mPlayer->AddComponent<Animator>();
 		animator->CreateAnimation(L"CatFrontMove", pacmacTexture
-			, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.3f);
+			, Vector2(0.0f, 0.0f), Vector2(386.0f, 246.0f), Vector2::Zero, 8, 0.1f);
 		animator->PlayAnimation(L"CatFrontMove", true);
+
+		mPlayer->GetComponent<Transform>()->SetPosition(Vector2(100.0f, 100.0f));
+		mPlayer->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
+		mPlayer->GetComponent<Transform>()->SetRotation(30.0f);
 		/*sr->SetTexture(pacmacTexture);*/
 
 
-		GameObject* bg = object::Instantiate<GameObject>(enums::eLayerType::BackGround);
+		GameObject* bg = object::Instantiate<GameObject>(enums::eLayerType::Particle);
 		SpriteRenderer* bgSr = bg->AddComponent<SpriteRenderer>();
-		bgSr->SetSize(Vector2(3.0f, 3.0f));
+		//bgSr->SetSize(Vector2(3.0f, 3.0f));
 
-		graphics::Texture* bgTexture = Resources::Find<graphics::Texture>(L"Map");
+		graphics::Texture* bgTexture = Resources::Find<graphics::Texture>(L"Bubble");
 		bgSr->SetTexture(bgTexture);
 
 		//게임오브젝트 생성 후에 레이어와 게임오브젝트들의 init 함수 호출
